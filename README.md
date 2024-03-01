@@ -1,6 +1,6 @@
 # Custom Shell Commands
 
- I've created 2 "custom" commands [rename and delete] for Unix-like Systems while learning how to programm basic shell scripts
+ I've created 2 "custom" commands [rename and delete] for Unix-like Systems while learning how to programm basic shell scripts in order to make them cleaner and more approachable to the average user
  
 \*I personally tested them on macOS*
 

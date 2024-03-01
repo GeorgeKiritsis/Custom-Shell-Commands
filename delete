@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Error: No Input Files Provided"
+    exit 1
+fi
+
+for file in "$@"; do
+    mv "$file" ~/.Trash
+done
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <current_pattern> <new_pattern>"
+    exit 1
+fi
+
+current_pattern="$1"
+new_pattern="$2"
+
+
+shopt -s nullglob
+
+for file in *"$current_pattern"*; do
+    if [ -e "$file" ]; then
+        filename=$(basename "$file")
+        new_filename="${filename//$current_pattern/$new_pattern}"
+        mv "$file" "$new_filename"
+        echo "Renamed $file to $new_filename"
+    else
+        echo "File $file not found."
+    fi
+done
+
